@@ -1,0 +1,27 @@
+{
+  "name": "programmingblog",
+  "version": "1.0.0",
+  "description": "A Blog for all programmers to come together and share their knowledge",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AWinterCoding/ProgrammingBlog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AWinterCoding/ProgrammingBlog/issues"
+  },
+  "homepage": "https://github.com/AWinterCoding/ProgrammingBlog#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "handlebars": "^4.7.7",
+    "mysql2": "^3.5.2",
+    "sequelize": "^6.32.1"
+  }
+}
