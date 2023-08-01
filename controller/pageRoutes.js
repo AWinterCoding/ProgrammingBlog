@@ -4,10 +4,10 @@ const auth = require('../utils/auth');
 
 router.get("/", async (req, res) => {
     try{
-        // const blogpostData = await BlogPost.findAll({
-        //     include: [{model:User, attributes: ['username']},
+        const blogpostData = await BlogPost.findAll({
+        //    include: [{model:User, attributes: ['username']},
         // {model: Comment}],
-    //    });
+    });
         
         // const blogPosts = blogpostData.map((blogpost) => blogpost.get({plain: true}));
         res.render("homepage", {

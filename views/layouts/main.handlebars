@@ -3,12 +3,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
+    <title>Programming Blog</title>
     <link rel="stylesheet" href="/view/style/style.css">
   </head>
 <body>
-    <header></header>
-    <h1>Here is an H1 header</h1>
+    <header>
+      <h1>Programming Blog</h1>
+      <form>
+      <label>Username</label>
+      <input type="text" />
+      <label>Password</label>
+      <input type="password" />
+      <input type="button" value="Login"/>
+      <input type="button" value="Sign Up"></input>
+    </form>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="/">Homepage</a>
+        </li>
+        <li>
+          <a href="/dashboard">Dashboard</a>
+        </li>
+      </ul>
+    </nav>
     {{{ body }}}
 </body>
 </html>
