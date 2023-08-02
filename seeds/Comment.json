@@ -1,0 +1,12 @@
+[
+    {
+        "content": "Bad Take",
+        "user_id": 2,
+        "blogpost_id": 1
+},
+{
+    "content": "Good Take",
+    "user_id": 1,
+    "blogpost_id": 2
+}
+]

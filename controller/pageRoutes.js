@@ -7,11 +7,11 @@ router.get("/", async (req, res) => {
         const blogpostData = await BlogPost.findAll({
         //    include: [{model:User, attributes: ['username']},
         // {model: Comment}],
+        include: [{model: Comment}, {model:User}]
     });
-        
-        // const blogPosts = blogpostData.map((blogpost) => blogpost.get({plain: true}));
+         const blogPostMap = blogpostData.map((blogpost) => blogpost.get({plain: true}));
         res.render("homepage", {
-            // blogPosts,
+             blogPostMap,
 
         });
     } catch (err){

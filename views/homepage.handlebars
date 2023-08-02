@@ -1,4 +1,8 @@
 {{#each blogPostMap as |blogpost|}}
-<h1>This is a blogpost</h1>
-<p>{{blogpost.title}}</p>
+<h1>BlogPost1</h1>
+<h4>{{blogpost.title}}</h4>
+<p>{{blogpost.description}}</p>
+{{#each blogpost.comments as |comment|}}
+<p>{{comment.content}}</p>
+{{/each}}
 {{/each}}
