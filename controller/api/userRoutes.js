@@ -16,20 +16,15 @@ router.post('/', async (req, res) => {
     }
   });
 
+  //login api request
   router.get("/login", async (req, res) =>{
     try{
-        const userJson = await User.findOne({where: { email: req.body.email }});
+        const userJson = await User.findOne({where: {username: req.body.username, password: req.body.password}});
+        console.log(req.query);
         if(!userJson){
             res.status(400).json({message: "Incorrect email or password, try again"});
             return;
         }
-
-        const validPassword = await userJson.checkPassword(req.body.password);
-        if(!validPassword){
-            res.status(400).json({message: "Incorrect email or password please try again"});
-            return;
-        }
-
         req.session.save(() => {
             req.session.user_id = userJson.id;
             req.session.logged_in = true;
@@ -39,6 +34,8 @@ router.post('/', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+//logout api call
 router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
       req.session.destroy(() => {
