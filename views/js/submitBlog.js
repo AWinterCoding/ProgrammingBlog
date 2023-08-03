@@ -3,8 +3,6 @@ function init(){
   blogPostFunction.addEventListener("click", function(){
     const blogTitle = document.querySelector(".blogTitle");
     const blogBody = document.querySelector(".blogBody");
-    console.log(blogTitle.value);
-    console.log(blogBody.value);
     if(blogTitle.value && blogBody.value){
         newBlog(blogTitle.value, blogBody.value);
         window.location.reload();

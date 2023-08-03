@@ -5,12 +5,15 @@
 <p>{{blogpost.date_created}}</p>
 {{#each blogpost.comments as |comment|}}
 <p>{{comment.content}}</p>
+<p>{{comment.user_id}}</p>
+{{/each}}
 <form>
     <h4>Leave a comment?</h4>
       <label>Comment</label>
-      <input class="commentContent" type="text" blogpostid = `{{blogpost.id}}`/>
-      <input type="button" class="submitComment" value="Post"/>
+      <input class="commentContent" id="content{{blogpost.id}}" type="text"/>
+      <input type="button" class="submitComment" id="{{blogpost.id}}"value="Post"/>
 </form>
-{{/each}}
 </div>
 {{/each}}
+
+<script src="./js/submitComment.js"></script>
