@@ -7,8 +7,7 @@ function loginCall(username, password){
       };
       
       fetch('http://localhost:3001/api/users/login', options)
-        .then(response => response.json())
-        .then(response => console.log(response))
+        .then(response => {if(response.ok){console.log("You are now logged in");}})
         .catch(err => console.error(err));
 }
 
@@ -18,6 +17,6 @@ function init(){
         let loginInfo = document.querySelectorAll(".loginInfo");
         loginCall(loginInfo[0].value, loginInfo[1].value);
     });
-}
+    }
 
 init();

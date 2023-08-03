@@ -21,8 +21,14 @@
         <li>
           <a href="/login">Login</a>
         </li>
+        {{!-- {{#if req.session.logged_in}} --}}
+        <li>
+          <a class="logout" href="#" onclick="logoutCall()">Logout</a>
+        </li>
+        {{!-- {{/if}} --}}
       </ul>
     </nav>
     {{{ body }}}
 </body>
+<script src="./js/logout.js"></script>
 </html>

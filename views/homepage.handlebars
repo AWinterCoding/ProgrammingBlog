@@ -1,7 +1,10 @@
 {{#each blogPostMap as |blogpost|}}
+<div class="blogCard">
 <h4>{{blogpost.title}}</h4>
 <p>{{blogpost.description}}</p>
+<p>{{blogpost.date_created}}</p>
 {{#each blogpost.comments as |comment|}}
 <p>{{comment.content}}</p>
 {{/each}}
+</div>
 {{/each}}
