@@ -1,4 +1,12 @@
 <h1>This is the Dashboard</h1>
+<form>
+      <h3>Would you like to share your thoughts?</h3>
+      <label>Title</label>
+      <input class="blogTitle" type="text"/>
+      <label>BlogPost</label>
+      <input class="blogBody" type="text"/>
+      <input type="button" class="submitBlog" value="Post"/>
+</form>
 {{#each blogPostMap as |blogpost|}}
 <h4>{{blogpost.title}}</h4>
 <p>{{blogpost.description}}</p>
@@ -6,3 +14,4 @@
 <p>{{comment.content}}</p>
 {{/each}}
 {{/each}}
+<script src="./js/submitBlog.js"></script>

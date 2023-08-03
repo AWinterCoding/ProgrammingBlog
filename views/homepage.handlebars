@@ -5,6 +5,12 @@
 <p>{{blogpost.date_created}}</p>
 {{#each blogpost.comments as |comment|}}
 <p>{{comment.content}}</p>
+<form>
+    <h4>Leave a comment?</h4>
+      <label>Comment</label>
+      <input class="commentContent" type="text"/>
+      <input type="button" class="submitComment" value="Post"/>
+</form>
 {{/each}}
 </div>
 {{/each}}

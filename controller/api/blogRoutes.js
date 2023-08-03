@@ -3,7 +3,14 @@ const { BlogPost } = require('../../models');
 
 router.post('/', async (req, res) => {
     try {
-      const blogpostData = await BlogPost.create(req.body);
+      console.log(req.body);
+      const body = {
+        title: req.body.title,
+        description: req.body.description,
+        user_id: req.session.user_id
+      }
+      const blogpostData = await BlogPost.create(body);
+
 
     res.status(200).json(blogpostData);
 } catch (err) {
