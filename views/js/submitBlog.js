@@ -11,7 +11,7 @@ function init(){
     }
   });
 }
-function newBlog(title, body, user_id){
+function newBlog(title, body){
     const options = {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},

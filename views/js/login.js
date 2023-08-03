@@ -16,6 +16,7 @@ function init(){
     loginButton.addEventListener("click", function(){
         let loginInfo = document.querySelectorAll(".loginInfo");
         loginCall(loginInfo[0].value, loginInfo[1].value);
+        location.href = "/dashboard";
     });
     }
 

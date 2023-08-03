@@ -27,7 +27,7 @@ router.post('/', async (req, res) => {
         req.session.save(() => {
             req.session.user_id = userJson.id;
             req.session.logged_in = true;
-            res.json({ user: userJson, message: "You are now logged in"});
+            res.json({ message: "You are now logged in"});
         });
     }catch(err){
         res.status(500).json(err);
@@ -41,7 +41,7 @@ router.post('/logout', (req, res) => {
         res.status(204).end();
       });
     } else {
-      res.status(404).end();
+      res.json({message: "You are already logged out"});
     }
   });
   module.exports = router;
