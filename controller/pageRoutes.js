@@ -22,6 +22,7 @@ router.get("/", async (req, res) => {
 
 router.get("/dashboard", async (req, res) =>{
     try{
+        console.log(req.session.user_id);
         if(req.session.user_id){
         const blogpostData = await BlogPost.findAll({
             where: {user_id: req.session.user_id}
