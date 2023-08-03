@@ -1,1 +1,8 @@
 <h1>This is the Dashboard</h1>
+{{#each blogPostMap as |blogpost|}}
+<h4>{{blogpost.title}}</h4>
+<p>{{blogpost.description}}</p>
+{{#each blogpost.comments as |comment|}}
+<p>{{comment.content}}</p>
+{{/each}}
+{{/each}}

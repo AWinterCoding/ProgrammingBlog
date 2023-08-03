@@ -17,10 +17,9 @@ router.post('/', async (req, res) => {
   });
 
   //login api request
-  router.get("/login", async (req, res) =>{
+  router.post("/login", async (req, res) =>{
     try{
         const userJson = await User.findOne({where: {username: req.body.username, password: req.body.password}});
-        console.log(req.query);
         if(!userJson){
             res.status(400).json({message: "Incorrect email or password, try again"});
             return;
@@ -29,7 +28,7 @@ router.post('/', async (req, res) => {
             req.session.user_id = userJson.id;
             req.session.logged_in = true;
             res.json({ user: userJson, message: "You are now logged in"});
-        })
+        });
     }catch(err){
         res.status(500).json(err);
     }

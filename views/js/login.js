@@ -1,7 +1,7 @@
 
 function loginCall(username, password){
     const options = {
-        method: 'GET',
+        method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: `{"username":"${username}","password":"${password}"}`
       };

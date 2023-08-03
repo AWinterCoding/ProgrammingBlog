@@ -22,9 +22,18 @@ router.get("/", async (req, res) => {
 
 router.get("/dashboard", async (req, res) =>{
     try{
-        res.render("dashboard", {
-
+        console.log(req.session.user_id);
+        if(req.session.user_id){
+        const blogpostData = await BlogPost.findAll({
+            where: {user_id: req.session.user_id}
         });
+        const blogPostMap = blogpostData.map((blogpost) => blogpost.get({plain: true}));
+        res.render("dashboard", {
+            blogPostMap
+        });
+    }else{
+        res.render("login", {});
+    }
     }catch(err){
         res.status(500).json(err);
     }
