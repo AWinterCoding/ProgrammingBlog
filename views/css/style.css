@@ -1,0 +1,126 @@
+body{
+    background-color: #99e88d;
+    color:#99e88d;
+}
+h1{
+    background-color: #83C760;
+    color:#4ea217;
+    display: inline;
+    margin:auto;
+    padding:auto;
+    width: 50%;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-decoration-style: none;
+  }
+li :hover{
+    background-color: white;
+    color: #ff91a4;
+    text-decoration: none;
+    text-decoration-style: none;
+    cursor: pointer;
+}
+li a :hover{
+    text-decoration: none;
+    color:#ff91a4;
+}
+div{
+    width: 50%;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    background-color: #ff91a4;
+    color: white;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 15px;
+}
+.blogBody{
+    width: 45%;
+    height: 25%;
+    padding:20px;
+    margin:auto;
+}
+.blogTitle{
+    width: 45%;
+    height: 10%;
+    padding: 10px;
+    margin: 5px;
+    margin-left: 0px;
+    margin-right: 7%;
+}
+label{
+    font-size: 20px;
+}
+button{
+    border-radius: 5px;
+    background-color: #83C760;
+    color: white;
+}
+header{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #ff91a4;
+  }
+h2{
+    text-align: center;
+    margin: auto;
+    background-color:#83C760;
+    color:white;
+    width: 25%;
+    border-radius: 15px;
+    padding:10px;
+    margin-top: 10px;
+}
+li {
+    float: left;
+}
+.submitComment{
+    margin: 15px;
+    background-color: #83C760;
+    color:white;
+    border-radius: 15px;
+    font-size: 20px;
+}
+.submitBlog{
+    margin: 15px;
+    background-color: #83C760;
+    color:white;
+    border-radius: 15px;
+    font-size: 20px;
+}
+.signup{
+    margin: 15px;
+    background-color: #83C760;
+    color:white;
+    border-radius: 15px;
+    font-size: 20px;
+}
+.login{
+    margin: 15px;
+    background-color: #83C760;
+    color:white;
+    border-radius: 15px;
+    font-size: 20px;
+}
+.loginHeader{
+    padding: 5px;
+    font-size: 20px;
+}
+.dashboard{
+    font-size: 20px;
+}

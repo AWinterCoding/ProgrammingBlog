@@ -1,17 +1,22 @@
-<h1>This is the Dashboard</h1>
+<h2 class="dashboard">This is the Dashboard</h2>
+<div>
 <form>
       <h3>Would you like to share your thoughts?</h3>
       <label>Title</label>
       <input class="blogTitle" type="text"/>
+      <br>
       <label>BlogPost</label>
       <input class="blogBody" type="text"/>
       <input type="button" class="submitBlog" value="Post"/>
 </form>
+</div>
 {{#each blogPostMap as |blogpost|}}
-<h4>{{blogpost.title}}</h4>
-<p>{{blogpost.description}}</p>
+<div>
+<h4>Title: {{blogpost.title}}</h4>
+<p>Description: {{blogpost.description}}</p>
 {{#each blogpost.comments as |comment|}}
-<p>{{comment.content}}</p>
+<p>Comment: {{comment.content}}</p>
 {{/each}}
+</div>
 {{/each}}
 <script src="./js/submitBlog.js"></script>

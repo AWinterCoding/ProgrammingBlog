@@ -1,15 +1,14 @@
 {{#each blogPostMap as |blogpost|}}
 <div class="blogCard">
-<h4>{{blogpost.title}}</h4>
-<p>{{blogpost.description}}</p>
-<p>{{blogpost.date_created}}</p>
+<h4>Title: {{blogpost.title}}</h4>
+<p>Description: {{blogpost.description}}</p>
+<p>Date Created: {{blogpost.date_created}}</p>
+<h5>Comments: </h5>
 {{#each blogpost.comments as |comment|}}
-<p>{{comment.content}}</p>
-<p>{{comment.user_id}}</p>
+<p>Comment: {{comment.content}} From: {{comment.user_id}}</p>
 {{/each}}
 <form>
-    <h4>Leave a comment?</h4>
-      <label>Comment</label>
+    <h6>Leave a comment?</h6>
       <input class="commentContent" id="content{{blogpost.id}}" type="text"/>
       <input type="button" class="submitComment" id="{{blogpost.id}}"value="Post"/>
 </form>
